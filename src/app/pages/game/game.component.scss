@@ -1,0 +1,15 @@
+.matche {
+  max-width: 20px;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+.matchesChoice-link {
+  &:hover {
+    cursor: pointer;
+  }
+  .matchesChoice {
+    width: 20px;
+  }
+}

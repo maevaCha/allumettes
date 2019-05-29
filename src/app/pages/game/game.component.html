@@ -1,0 +1,46 @@
+
+<div class="container py-4 text-center">
+  <div class="row">
+    <div class="col-12">
+      <h1 *ngIf="!matchesChoiceComputer">Prêt à jouer ?</h1>
+      <h1 *ngIf="matchesChoiceComputer">L'ordinateur a prit {{matchesChoiceComputer}} allumette(s)</h1>
+      <p *ngIf="matchesInit"> Il reste {{matchesInit}} allumettes</p>
+    </div>
+    <div class="col-12 mb-4">
+      <span *ngFor="let matche of matches">
+        <img class="matche" src="assets/images/matche.png">
+      </span>
+      <h2 class="font-weight-bold text-primary" *ngIf="winningStr">{{winningStr}}</h2>
+    </div>
+  </div>
+</div>
+<div *ngIf="!winningStr" class="container-fluid bg-light text-center">
+  <div class="container">
+    <div class="row py-4">
+      <div class="col-12 py-4">
+        <h3>Combien d'allumettes voulez vous prendre ?</h3>
+        <p>Cliquez sur les allumettes</p>
+        <div class="row py-4">
+          <div class="col">
+            <a class="d-inline-block matchesChoice-link" (click)="userPlays(1);">
+              <img class="matchesChoice" src="assets/images/matche.png">
+            </a>
+          </div>
+          <div class="col">
+            <a class="d-inline-block matchesChoice-link" (click)="userPlays(2);">
+              <img class="matchesChoice" src="assets/images/matche.png">
+              <img class="matchesChoice" src="assets/images/matche.png">
+            </a>
+          </div>
+          <div class="col">
+            <a class="d-inline-block matchesChoice-link" (click)="userPlays(3);">
+              <img class="matchesChoice" src="assets/images/matche.png">
+              <img class="matchesChoice" src="assets/images/matche.png">
+              <img class="matchesChoice" src="assets/images/matche.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
